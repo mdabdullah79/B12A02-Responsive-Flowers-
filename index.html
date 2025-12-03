@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flower Market</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="sticky top-0 bg-white shadow-sm z-50">
+      <!-- Navbar -->
+      <nav class="flex items-center justify-between w-11/12 mx-auto mb-20 p-2">
+        <!-- Nav Start -->
+        <div class="flex flex-row items-center justify-center">
+          <!-- Hamburger for mobile -->
+          <div class="block md:hidden">
+            <div class="dropdown block md:hidden">
+              <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h7"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+              >
+                <li>
+                  <a
+                    href="#Home"
+                    class="relative text-[16px] font-bold before:content-[''] before:absolute before:-bottom-1 before:left-0 before:w-full before:h-[3px] before:bg-green-700 before:origin-left before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100 hover:text-green-700"
+                  >
+                    Home
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="#Products"
+                    class="relative text-[16px] text-gray-500 before:content-[''] before:absolute before:-bottom-1 before:left-0 before:w-full before:h-[3px] before:bg-green-700 before:origin-left before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100 hover:text-green-700"
+                  >
+                    Products
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="#Reviews"
+                    class="relative text-[16px] text-gray-500 before:content-[''] before:absolute before:-bottom-1 before:left-0 before:w-full before:h-[3px] before:bg-green-700 before:origin-left before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100 hover:text-green-700"
+                  >
+                    Reviews
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="#Contact"
+                    class="relative text-[16px] text-gray-500 before:content-[''] before:absolute before:-bottom-1 before:left-0 before:w-full before:h-[3px] before:bg-green-700 before:origin-left before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100 hover:text-green-700"
+                  >
+                    Contact
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="#Join"
+                    class="relative text-[16px] text-gray-500 before:content-[''] before:absolute before:-bottom-1 before:left-0 before:w-full before:h-[3px] before:bg-green-700 before:origin-left before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100 hover:text-green-700"
+                  >
+                    Join
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Left Logo -->
+          <img
+            src="assets/logo.png"
+            alt="Flower Market Logo"
+            class="w-[80px] md:w-[100px]"
+          />
+        </div>
+
+        <!-- Nav Middle -->
+        <div class="hidden md:block">
+          <ul
+            class="inter-font text-[16px] flex items-center justify-center gap-5"
+          >
+            <li>
+              <a
+                href="#Home"
+                class="relative text-[16px] font-bold before:content-[''] before:absolute before:-bottom-1 before:left-0 before:w-full before:h-[3px] before:bg-green-700 before:origin-left before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100 hover:text-green-700"
+              >
+                Home
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#Products"
+                class="relative text-[16px] text-gray-500 before:content-[''] before:absolute before:-bottom-1 before:left-0 before:w-full before:h-[3px] before:bg-green-700 before:origin-left before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100 hover:text-green-700"
+              >
+                Products
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#Reviews"
+                class="relative text-[16px] text-gray-500 before:content-[''] before:absolute before:-bottom-1 before:left-0 before:w-full before:h-[3px] before:bg-green-700 before:origin-left before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100 hover:text-green-700"
+              >
+                Reviews
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#Contact"
+                class="relative text-[16px] text-gray-500 before:content-[''] before:absolute before:-bottom-1 before:left-0 before:w-full before:h-[3px] before:bg-green-700 before:origin-left before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100 hover:text-green-700"
+              >
+                Contact
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="#Join"
+                class="relative text-[16px] text-gray-500 before:content-[''] before:absolute before:-bottom-1 before:left-0 before:w-full before:h-[3px] before:bg-green-700 before:origin-left before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100 hover:text-green-700"
+              >
+                Join
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Nav End -->
+        <div class="">
+          <a href="" class="nav-link text-black flex items-center">
+            <i class="fas fa-shopping-cart mr-2"></i>
+            <!-- Icon on the left -->
+            <p>Cart($500)</p>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main>
+      <!-- Banner Section -->
+      <section
+        id="Home"
+        class="banner scroll-mt-25 flex flex-col-reverse  lg:flex-row items-center justify-between w-11/12 mx-auto"
+      >
+        <!-- Banner Left Section -->
+        <div class="">
+          <h1 class="text-[34px] md:text-[65px] noto-serif-font">
+            ALWAYS <span class="text-orange-500">FRESH<br />FLOWERS</span>
+          </h1>
+          <p
+            class="banner-discription container mtext-gray inter-font text-justify font-light text-[18px] text-gray-500"
+          >
+            Indulge your senses with the beauty and fragrance of <br />
+            our fresh flower shop. From classic roses to exotic<br />
+            blooms, we offer a wide variety of fresh flowers that<br />
+            are perfect for any occasion.
+          </p>
+        </div>
+
+        <!-- Right Sliding Banner -->
+       <img src="./assets/hero-flower.png" alt="">
+      </section>
+
+    <main>
+      <section id="Products" class="w-11/12 scroll-mt-25 mx-auto mt-20">
+        <div class="text-center">
+          <h2 class="text-[34px] md:text-[56px] noto-serif-font">
+            <span class="text-orange-500">Our</span> Plants
+          </h2>
+          <p class="inter-font font-light text-[18px] text-gray-500">
+            Indulge your senses with the beauty and fragrance of our fresh
+            flower shop. <br />From classic roses to exotic blooms, we offer a
+            wide variety of fresh.
+          </p>
+        </div>
+        <div class="mt-10 inter-font grid grid-cols-2 lg:grid-cols-4 md:grid-cols-2 gap-6">
+          <!-- Flower Type 1 -->
+          <article
+            class="flex flex-col items-center shadow-md hover:shadow-2xl hover:scale-102 transition duration-500 ease-in-out"
+          >
+            <img
+              class="w-full"
+              src="./assets/sample-flower-image.png"
+              alt="Lily Blossom flower"
+            />
+            <div class="text-center p-3">
+              <h3 class="text-[24px] font-bold">Lily Blossom</h3>
+
+              <p class="text-[25px] font-bold">20 USD</p>
+            </div>
+
+            <button
+              class="bg-[#E95A08] w-full h-10 text-white hover:bg-black hover:font-bold transition duration-500 ease-in-out"
+            >
+              ADD TO CART
+            </button>
+          </article>
+
+          <!-- Flower Type 2 -->
+          <article
+            class="flex flex-col items-center shadow-md hover:shadow-2xl hover:scale-102 transition duration-500 ease-in-out"
+          >
+            <img
+              class="w-full"
+              src="./assets/sample-flower-image.png"
+              alt="Lily Blossom flower"
+            />
+            <div class="text-center p-3">
+              <h3 class="text-[24px] font-bold">Lily Blossom</h3>
+
+              <p class="text-[25px] font-bold">20 USD</p>
+            </div>
+
+            <button
+              class="bg-[#E95A08] w-full h-10 text-white hover:bg-black hover:font-bold transition duration-500 ease-in-out"
+            >
+              ADD TO CART
+            </button>
+          </article>
+
+          <!-- Flower Type 3 -->
+          <article
+            class="flex flex-col items-center shadow-md hover:shadow-2xl hover:scale-102 transition duration-500 ease-in-out"
+          >
+            <img
+              class="w-full"
+              src="./assets/sample-flower-image.png"
+              alt="Lily Blossom flower"
+            />
+            <div class="text-center p-3">
+              <h3 class="text-[24px] font-bold">Lily Blossom</h3>
+
+              <p class="text-[25px] font-bold">20 USD</p>
+            </div>
+
+            <button
+              class="bg-[#E95A08] w-full h-10 text-white hover:bg-black hover:font-bold transition duration-500 ease-in-out"
+            >
+              ADD TO CART
+            </button>
+          </article>
+
+          <!-- Flower Type 4 -->
+          <article
+            class="flex flex-col items-center shadow-md hover:shadow-2xl hover:scale-102 transition duration-500 ease-in-out"
+          >
+            <img
+              class="w-full"
+              src="./assets/sample-flower-image.png"
+              alt="Lily Blossom flower"
+            />
+            <div class="text-center p-3">
+              <h3 class="text-[24px] font-bold">Lily Blossom</h3>
+
+              <p class="text-[25px] font-bold">20 USD</p>
+            </div>
+
+            <button
+              class="bg-[#E95A08] w-full h-10 text-white hover:bg-black hover:font-bold transition duration-500 ease-in-out"
+            >
+              ADD TO CART
+            </button>
+          </article>
+
+          <!-- Flower Type 5 -->
+          <article
+            class="flex flex-col items-center shadow-md hover:shadow-2xl hover:scale-102 transition duration-500 ease-in-out"
+          >
+            <img
+              class="w-full"
+              src="./assets/sample-flower-image.png"
+              alt="Lily Blossom flower"
+            />
+            <div class="text-center p-3">
+              <h3 class="text-[24px] font-bold">Lily Blossom</h3>
+
+              <p class="text-[25px] font-bold">20 USD</p>
+            </div>
+
+            <button
+              class="bg-[#E95A08] w-full h-10 text-white hover:bg-black hover:font-bold transition duration-500 ease-in-out"
+            >
+              ADD TO CART
+            </button>
+          </article>
+
+          <!-- Flower Type 6 -->
+          <article
+            class="flex flex-col items-center shadow-md hover:shadow-2xl hover:scale-102 transition duration-500 ease-in-out"
+          >
+            <img
+              class="w-full"
+              src="./assets/sample-flower-image.png"
+              alt="Lily Blossom flower"
+            />
+            <div class="text-center p-3">
+              <h3 class="text-[24px] font-bold">Lily Blossom</h3>
+
+              <p class="text-[25px] font-bold">20 USD</p>
+            </div>
+
+            <button
+              class="bg-[#E95A08] w-full h-10 text-white hover:bg-black hover:font-bold transition duration-500 ease-in-out"
+            >
+              ADD TO CART
+            </button>
+          </article>
+
+          <!-- Flower Type 7 -->
+         <article
+            class="flex flex-col items-center shadow-md hover:shadow-2xl hover:scale-102 transition duration-500 ease-in-out"
+          >
+            <img
+              class="w-full"
+              src="./assets/sample-flower-image.png"
+              alt="Lily Blossom flower"
+            />
+            <div class="text-center p-3">
+              <h3 class="text-[24px] font-bold">Lily Blossom</h3>
+
+              <p class="text-[25px] font-bold">20 USD</p>
+            </div>
+
+            <button
+              class="bg-[#E95A08] w-full h-10 text-white hover:bg-black hover:font-bold transition duration-500 ease-in-out"
+            >
+              ADD TO CART
+            </button>
+          </article>
+
+          <!-- Flower Type 8 -->
+          <article
+            class="flex flex-col items-center shadow-md hover:shadow-2xl hover:scale-102 transition duration-500 ease-in-out"
+          >
+            <img
+              class="w-full"
+              src="./assets/sample-flower-image.png"
+              alt="Lily Blossom flower"
+            />
+            <div class="text-center p-3">
+              <h3 class="text-[24px] font-bold">Lily Blossom</h3>
+
+              <p class="text-[25px] font-bold">20 USD</p>
+            </div>
+
+            <button
+              class="bg-[#E95A08] w-full h-10 text-white hover:bg-black hover:font-bold transition duration-500 ease-in-out"
+            >
+              ADD TO CART
+            </button>
+          </article>
+
+         
+        </div>
+      </section>
+
+      <section
+        class="w-11/12 mx-auto mt-40 flex flex-col md:flex-row items-center justify-center gap-4 mb-20"
+      >
+        
+        <div class="storeimg mr-0 md:mr-15 relative">
+          <img
+            src="assets/trusted-badge.png"
+            alt=""
+            class="w-[286px] absolute left-[347px] bottom-[438px] hidden md:block"
+          />
+          <img src="assets/flower-store.png" alt="" class="" />
+        </div>
+        <div class="">
+          <h3 class="text-[50px] noto-serif-font">
+            Flower & Plants<br />
+            Lover
+          </h3>
+          <ul
+            class="list-disc text-gray-500 flex flex-col gap-3 text-[22px] text-justify w-full md:w-[400px]"
+          >
+            <li>
+              Indulge your senses with the beauty and fragrance of our fresh
+              flower shop.From classic roses to exotic blooms, we offer a wide
+              variety of fresh.
+            </li>
+
+            <li>
+              Indulge your senses with the beauty and fragrance of our fresh
+              flower shop.From classic roses to exotic blooms, we offer a wide
+              variety of fresh.
+            </li>
+            <li>
+              Indulge your senses with the beauty and fragrance of our fresh
+              flower shop.From classic roses to exotic blooms, we offer a wide
+              variety of fresh.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="m-30   w-11/12 mx-auto">
+      <div class="text-center mb-30">
+          <h2 class="text-[34px] md:text-[56px] noto-serif-font">
+            <span class="text-orange-500">Latest</span> Deals
+          </h2>
+          <p class="inter-font font-light text-[18px] text-gray-500">
+            Indulge your senses with the beauty and fragrance of our fresh
+            flower shop. <br />From classic roses to exotic blooms, we offer a
+            wide variety of fresh.
+          </p>
+        </div>
+      <div class="flex flex-col md:flex-row items-center justify-center gap-10 h-80">
+                <div class="flex h-full flex-col w-full md:w-[300px] gap-10 ">
+          <div
+            class=" bg-[url('../assets/deal-bloom.png')] rounded-xl  w-full bg-cover bg-center bg-no-repeat font-bold flex flex-col items-center p-10"
+          >
+            <h2 class="text-[20px] text-white">60% Off | Bloom Plant</h2>
+            <button class="text-white underline">Shop Now</button>
+          </div>
+          <div
+            class="bg-[url('../assets/deal-ana.png')]   rounded-xl  bg-cover bg-center bg-no-repeat font-bold "
+          >
+          <div class="bg-black/40  flex flex-col items-center p-10 rounded-xl">
+            <h2 class="text-[20px] text-white">60% Off | Bloom Plant</h2>
+            <button class="text-white underline">Shop Now</button>
+          </div>
+
+          </div>
+        </div>
+
+        <div
+          class="bg-[url('../assets/deal-zabo.png')] rounded-xl w-full md:w-[600px] h-full bg-cover bg-center bg-no-repeat"
+        >
+          <div
+            class="font-bold h-full w-full md:w-[600px] rounded-xl bg-black/40 flex flex-col items-center justify-center p-10 bg-"
+          >
+            <h2 class="text-[20px] text-white">60% Off | Bloom Plant</h2>
+            <button class="text-white underline">Shop Now</button>
+          </div>
+        </div>
+      </section>
+      <section
+        class="flex flex-col  items-center justify-center text-center bg-[url('../assets/news-letter-bg.png')] bg-cover bg-center bg-no-repeat h-[533px] w-full"
+      >
+        <div class="join-title">
+          <h3 class="text-[55px] text-white mb-6">Join the colorful Bunch</h3>
+        </div>
+        <div class="  email-button flex items-center justify-center">
+          <input
+            type="email"
+            name=""
+            id=""
+            placeholder="Write Email"
+            class="bg-white  py-3 px-10 container"
+          />
+          <button class="bg-[#E95A08]  text-white py-3 px-10 text-center">Subcribe</button>
+        </div>
+      </div>
+      
+
+      </section>
+    </main>
+    <!-- Footer Section -->
+    <footer class="p-4 md:py-12 md:px-40 bg-gray-100">
+      <div class="flex flex-col lg:flex-row items-start justify-between">
+        <div class="max-w-[300px]">
+          <img src="assets/logo.png" alt="Flower Market Logo" class="w-[100px]"/>
+          <p class="mt-5 text-gray-500 mb-5 ">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex,
+            praesentium. Lorem ipsum dolor sit amet.
+          </p>
+        </div>
+
+        <nav>
+          <ul class="flex flex-col gap-2 md:gap-8 text-gray-500">
+            <li>
+              <a
+                href=""
+                class="relative text-[16px] text-gray-500 before:content-[''] before:absolute before:-bottom-1 before:left-0 before:w-full before:h-[3px] before:bg-green-700 before:origin-left before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100 hover:text-green-700"
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                class="relative text-[16px] text-gray-500 before:content-[''] before:absolute before:-bottom-1 before:left-0 before:w-full before:h-[3px] before:bg-green-700 before:origin-left before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100 hover:text-green-700"
+              >
+                About Us
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                class="relative text-[16px] text-gray-500 before:content-[''] before:absolute before:-bottom-1 before:left-0 before:w-full before:h-[3px] before:bg-green-700 before:origin-left before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100 hover:text-green-700"
+              >
+                Blog
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                class="relative text-[16px] text-gray-500 before:content-[''] before:absolute before:-bottom-1 before:left-0 before:w-full before:h-[3px] before:bg-green-700 before:origin-left before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100 hover:text-green-700"
+              >
+                FAQ
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                class="relative text-[16px] text-gray-500 before:content-[''] before:absolute before:-bottom-1 before:left-0 before:w-full before:h-[3px] before:bg-green-700 before:origin-left before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100 hover:text-green-700"
+              >
+                Contact Us
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <nav>
+          <ul class="flex flex-col gap-2 md:gap-8 text-gray-500">
+            <li>
+              <a
+                href=""
+                class="relative text-[16px] text-gray-500 before:content-[''] before:absolute before:-bottom-1 before:left-0 before:w-full before:h-[3px] before:bg-green-700 before:origin-left before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100 hover:text-green-700"
+              >
+                Features
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                class="relative text-[16px] text-gray-500 before:content-[''] before:absolute before:-bottom-1 before:left-0 before:w-full before:h-[3px] before:bg-green-700 before:origin-left before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100 hover:text-green-700"
+              >
+                Pricing
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                class="relative text-[16px] text-gray-500 before:content-[''] before:absolute before:-bottom-1 before:left-0 before:w-full before:h-[3px] before:bg-green-700 before:origin-left before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100 hover:text-green-700"
+              >
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                class="relative text-[16px] text-gray-500 before:content-[''] before:absolute before:-bottom-1 before:left-0 before:w-full before:h-[3px] before:bg-green-700 before:origin-left before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100 hover:text-green-700"
+              >
+                Terms of Service
+              </a>
+            </li>
+            <li>
+              <a
+                href=""
+                class="relative text-[16px] text-gray-500 before:content-[''] before:absolute before:-bottom-1 before:left-0 before:w-full before:h-[3px] before:bg-green-700 before:origin-left before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100 hover:text-green-700"
+              >
+                Support
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="flex items-center gap-6 mt-3">
+          <a href="" class="hover:text-green-700 transition duration-300">
+            <img src="assets/icon-linkedin.png" alt="LinkedIn" />
+          </a>
+          <a href="" class="hover:text-green-700 transition duration-300">
+            <img src="assets/icon-twitter.png" alt="Twitter" />
+          </a>
+          <a href="" class="hover:text-green-700 transition duration-300">
+            <img src="assets/icon-facebook.png" alt="Facebook" />
+          </a>
+          <a href="" class="hover:text-green-700 transition duration-300">
+            <img src="assets/icon-youtube.png" alt="YouTube" />
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
